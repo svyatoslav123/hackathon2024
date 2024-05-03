@@ -22,11 +22,11 @@ class Pball:
         #pygame.draw.rect(window, (0,0,255), self.hitbox)
         window.blit(self.photo, (self.hitbox.x, self.hitbox.y))
 
-    def move(self):
-        self.hitbox.x += self.speed
-        if self.hitbox.x > 0:
-            self.hitbox.x = (0,450)
-            self.hitbox.y = (0,150)
+    #def move(self):
+        #self.hitbox.x += self.speed
+        #if self.hitbox.x > 0:
+            #self.hitbox.x = (0,450)
+            #self.hitbox.y = (0,150)
 
 potatoballs = []
 

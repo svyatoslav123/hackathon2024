@@ -24,15 +24,15 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
 
-        for pball in potatoballs:
-            pball.draw(window)
-            pball.move()
+        #for pball in potatoballs:
+            #pball.draw(window)
+            #pball.move()
 
     window.blit(background, (0, 0))
     potato.draw(window)
     for pball in potatoballs:
         pball.draw(window)
-        pball.move()
+
     cuphead.move()
     cuphead.draw(window)
     pygame.display.flip()
