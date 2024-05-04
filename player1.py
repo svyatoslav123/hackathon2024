@@ -29,21 +29,16 @@ class Player:
 
 
 
-class Cuphead(Player):
-    def __init__(self, x, y, w, h, img, speed):
-        Player.__init__(self, x, y, w, h, img, speed)
-        self.counter = 0
-
     def animation(self):
 
             self.counter += 1
-            if 0 <= self.counter < 20:
-                self.image = pygame.transform.scale(pygame.image.load('Знімок екрана 2024-05-03 224612.jpg'), (self.hitbox.w, self.hitbox.h))
-            elif 20 <= self.counter < 40:
-                self.image = pygame.transform.scale(pygame.image.load('Знімок екрана 2024-05-03 224550.jpg'), (self.hitbox.w, self.hitbox.h))
-            elif 40 <= self.counter < 60:
-                self.image = pygame.transform.scale(pygame.image.load('Знімок екрана 2024-05-03 224533.jpg'), (self.hitbox.w, self.hitbox.h))
+            if 0 <= self.counter < 15:
+                self.photo = pygame.transform.scale(pygame.image.load('Знімок екрана 2024-05-03 224612.jpg'), (self.hitbox.w, self.hitbox.h))
+            elif 15 <= self.counter < 30:
+                self.photo = pygame.transform.scale(pygame.image.load('Знімок екрана 2024-05-03 224550.jpg'), (self.hitbox.w, self.hitbox.h))
+            elif 30 <= self.counter < 45:
+                self.photo = pygame.transform.scale(pygame.image.load('Знімок екрана 2024-05-03 224533.jpg'), (self.hitbox.w, self.hitbox.h))
 
 
-            if self.counter > 60:
+            if self.counter > 45:
                 self.counter = 0

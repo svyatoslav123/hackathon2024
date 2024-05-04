@@ -1,6 +1,6 @@
 import pygame
 from player1 import Player
-from player1 import Cuphead
+
 from potatoboss import Potato
 from potatoball import *
 pygame.init()
@@ -12,7 +12,7 @@ pygame.mixer.init()
 sound = pygame.mixer.music.load("07 Botanic Panic.mp3")
 pygame.mixer.music.play(-5)
 
-cuphead = Cuphead.__init__(self, x, y, w, h, img, speed)
+
 
 
 background = pygame.transform.scale(
