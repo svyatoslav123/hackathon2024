@@ -32,13 +32,13 @@ class Player:
     def animation(self):
 
             self.counter += 1
-            if 0 <= self.counter < 15:
-                self.photo = pygame.transform.scale(pygame.image.load('Знімок екрана 2024-05-03 224612.jpg'), (self.hitbox.w, self.hitbox.h))
-            elif 15 <= self.counter < 30:
-                self.photo = pygame.transform.scale(pygame.image.load('Знімок екрана 2024-05-03 224550.jpg'), (self.hitbox.w, self.hitbox.h))
-            elif 30 <= self.counter < 45:
-                self.photo = pygame.transform.scale(pygame.image.load('Знімок екрана 2024-05-03 224533.jpg'), (self.hitbox.w, self.hitbox.h))
+            if 0 <= self.counter < 20:
+                self.photo = pygame.transform.scale(pygame.image.load('Знімок екрана 2024-05-04 162415.jpg'), (self.hitbox.w, self.hitbox.h))
+            elif 20 <= self.counter < 40:
+                self.photo = pygame.transform.scale(pygame.image.load('Знімок екрана 2024-05-04 162525.jpg'), (self.hitbox.w, self.hitbox.h))
+            elif 40 <= self.counter < 60:
+                self.photo = pygame.transform.scale(pygame.image.load('Знімок екрана 2024-05-04 162346.jpg'), (self.hitbox.w, self.hitbox.h))
 
 
-            if self.counter > 45:
+            if self.counter > 60:
                 self.counter = 0
