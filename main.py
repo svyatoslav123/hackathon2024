@@ -31,6 +31,7 @@ while game:
     if screen == 'menu':
         menu_bg.draw(window)
         btn_play.draw(window)
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 game = False
@@ -51,9 +52,7 @@ while game:
         btn_menu.draw(window)
 
 
-        for pball in potatoballs:
-            pball.draw(window)
-            pball.allballs()
+
         for event in pygame.event.get():
             if event.type == QUIT:
                 game = False
@@ -64,15 +63,16 @@ while game:
                     screen = 'menu'
 
 
-            window.blit(background, (0, 0))
-            potato.draw(window)
-            potato.allboss()
+        window.blit(background, (0, 0))
+        potato.draw(window)
+        potato.allboss()
 
+        for pball in potatoballs:
+            pball.draw(window)
+            pball.allballs()
+        cuphead.move()
+        cuphead.jump()
+        cuphead.draw(window)
 
-            cuphead.move()
-            cuphead.jump()
-            cuphead.draw(window)
-            for pball in potatoballs:
-                pball.draw(window)
-            pygame.display.flip()
-            fps.tick(60)
+        pygame.display.flip()
+        fps.tick(60)

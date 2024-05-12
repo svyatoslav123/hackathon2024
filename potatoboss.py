@@ -9,11 +9,13 @@ class Potato:
         self.speed = speed
         self.hitbox.w = w
         self.hitbox.h = h
+        self.hp = 100
         self.counter = 0
 
     def draw(self, window):
 
         window.blit(self.photo, (self.hitbox.x, self.hitbox.y))
+
     def allboss(self):
         self.animation('stayb')
     def animation(self,kind):

@@ -1,6 +1,6 @@
 
 import random
-
+from potatoboss import Potato
 import pygame
 from pygame import image
 import pygame
@@ -23,15 +23,15 @@ class Pball:
         window.blit(self.photo, (self.hitbox.x, self.hitbox.y))
 
     def allballs(self):
-        self.hitbox.y += self.speed
+        self.hitbox.x -= self.speed
         if self.hitbox.x <  0:
-            self.hitbox.x = (Potato(self.hitbox.x))
-            self.hitbox.y = (Potato(self.hitbox.y))
+            self.hitbox.x = self.hitbox.x = 490
+            self.hitbox.y = self.hitbox.y = 420
 
 potatoballs = []
 
 for i in range(5):
-    potatoballs.append(Pball(460,30,  50, 50, "7b72a9f27ed5bad6a836b73860616338a25c2b34r1-220-220v2_hq.jpg", 4 ))
+    potatoballs.append(Pball(490,420,  50, 50, "7b72a9f27ed5bad6a836b73860616338a25c2b34r1-220-220v2_hq.jpg", 4 ))
 
 
 

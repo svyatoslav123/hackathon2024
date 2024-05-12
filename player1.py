@@ -10,7 +10,7 @@ class Player:
         self.hitbox.w = w
         self.hitbox.h = h
         self.isJumping = self.jump
-        self.jumpCount = 10
+        self.jumpCount = 15
         self.bullets = []
         self.counter = 0
 
@@ -47,9 +47,9 @@ class Player:
         if self.isJumping:
             self.hitbox.y -= self.jumpCount
             self.jumpCount -= 1
-            if self.jumpCount == -11:
+            if self.jumpCount == -16:
                 self.isJumping = False
-                self.jumpCount = 10
+                self.jumpCount = 15
     def animation(self,kind):
         if kind == 'stay':
             self.counter += 1
