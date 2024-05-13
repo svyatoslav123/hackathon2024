@@ -7,6 +7,7 @@ import pygame
 
 
 
+potatoballs = []
 
 class Pball:
     def __init__(self, x, y, w, h, img, speed):
@@ -15,23 +16,27 @@ class Pball:
         self.hitbox.x = x
         self.hitbox.y = y
         self.speed = speed
+        self.hp = 1
+        self.i = i
+        #то саме як в патроні
+
 
 
 
     def draw(self, window):
-        #pygame.draw.rect(window, (0,0,255), self.hitbox)
+
         window.blit(self.photo, (self.hitbox.x, self.hitbox.y))
+        # то саме як в патроні
 
     def allballs(self):
         self.hitbox.x -= self.speed
         if self.hitbox.x <  0:
             self.hitbox.x = self.hitbox.x = 490
             self.hitbox.y = self.hitbox.y = 420
-
-potatoballs = []
-
+            # то саме як в патроні
 for i in range(5):
-    potatoballs.append(Pball(490,420,  50, 50, "7b72a9f27ed5bad6a836b73860616338a25c2b34r1-220-220v2_hq.jpg", 4 ))
+    potatoballs.append(Pball(490, 420, 60, 60, "52-removebg-preview.png", 4))
+
 
 
 

@@ -9,10 +9,13 @@ class Bullet:
         self.hitbox.x = x
         self.hitbox.y = y
         self.speed = speed
+        #створювання класу патрона
 
     def draw(self, window):
 
         window.blit(self.photo, (self.hitbox.x, self.hitbox.y))
+        #відмальовування патрона
 
     def move(self):
         self.hitbox.x += self.speed
+        #створення руху патрона

@@ -1,4 +1,6 @@
 import pygame
+import bullet
+
 
 class Potato:
     def __init__(self, x, y, w, h, img, speed):
@@ -9,15 +11,21 @@ class Potato:
         self.speed = speed
         self.hitbox.w = w
         self.hitbox.h = h
-        self.hp = 100
+        self.hp = 400
         self.counter = 0
+        # то саме як в патроні
 
     def draw(self, window):
 
         window.blit(self.photo, (self.hitbox.x, self.hitbox.y))
+        # то саме як в патроні
+
+
 
     def allboss(self):
         self.animation('stayb')
+
+    # то саме як в патроні
     def animation(self,kind):
         if kind == 'stayb':
             self.counter += 1
@@ -27,6 +35,7 @@ class Potato:
                 self.photo = pygame.transform.scale(pygame.image.load('33-removebg-preview (3).png'), (self.hitbox.w, self.hitbox.h))
             if self.counter > 40:
                self.counter = 0
+               # то саме як в плеєрі
 
 
 

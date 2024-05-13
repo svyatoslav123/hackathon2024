@@ -10,9 +10,11 @@ class Player:
         self.hitbox.w = w
         self.hitbox.h = h
         self.isJumping = self.jump
-        self.jumpCount = 15
+        self.jumpCount = 17
         self.bullets = []
         self.counter = 0
+        self.hp = 3
+        #створення класу плеєр
 
     def draw(self, window):
 
@@ -20,13 +22,13 @@ class Player:
         for bullet in self.bullets:
             bullet.draw(window)
             bullet.move()
+        #відмальовування плеєру
 
 
     def move(self):
         keys = pygame.key.get_pressed()
-        if keys[pygame.K_s]:
-            self.hitbox.y += self.speed
-        elif keys[pygame.K_d]:
+
+        if keys[pygame.K_d]:
             self.hitbox.x += self.speed
             self.animation('go_left')
         elif keys[pygame.K_a]:
@@ -38,6 +40,7 @@ class Player:
             self.animation('shoot')
         else:
             self.animation('stay')
+            #задавання руху
 
     def jump(self):
         keys = pygame.key.get_pressed()
@@ -47,9 +50,10 @@ class Player:
         if self.isJumping:
             self.hitbox.y -= self.jumpCount
             self.jumpCount -= 1
-            if self.jumpCount == -16:
+            if self.jumpCount == -18:
                 self.isJumping = False
-                self.jumpCount = 15
+                self.jumpCount = 17
+                #створювання стрибку
     def animation(self,kind):
         if kind == 'stay':
             self.counter += 1
@@ -107,6 +111,7 @@ class Player:
 
             if self.counter > 35:
                 self.counter = 0
+                #створювання анімації
 
 
 
